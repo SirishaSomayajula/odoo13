@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+<record id="action_costing_types" model="ir.actions.act_window">
+<field name="name">Costing Types</field>
+<field name="type">ir.actions.act_window</field>
+<field name="res_model">costing</field>
+<field name="view_model">tree,form</field>
+</record>
+<menuitem id="priliminary_costing" name="priliminary costing"/>
+<menuitem id="Buyer_approved_costing" name="Buyer approved costing"/>
+<menuitem id="factory_approved_costing" name="factory approved costing"/>
+</odoo>

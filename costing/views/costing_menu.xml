@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Costing App Menu -->
+<menuitem id="menu_costing"
+name="Costing" />
+<!-- Action to open the cost -->
+<act_window id="action_costing_cost"
+name="Costing"
+res_model="costing"
+view_mode="tree,form"
+/>
+<!-- Menu item to open the cost -->
+<menuitem id="menu_costing_cost"
+name="costing "
+parent="menu_costing"
+action="action_costing_cost"
+/>
+<act_window id="action_costing_cost"
+      name="Costing"
+      res_model="costing"
+      view_mode="tree,form"
+    />
+
+    <menuitem id="menu_costing_configuration"
+              name="Configuration"
+              action="action_costing_cost"
+              parent="menu_costing"/>
+
+<act_window id="action_costing_cost"
+        name="Configuration"
+        res_model="costing"
+        view_mode="tree,form"/>
+
+
+  <menuitem id="menu_costing_costing_stages"
+           name="costing stages"
+           action="action_costing_cost"
+           parent="menu_costing_configuration"/>
+           
+  <act_window id="action_costing_cost"
+        name="costing stages"
+        res_model="costing"
+        view_mode="tree,form"/>
+         
+<menuitem id="menu_costing_costing_types"
+           name="costing types"
+           action="action_costing_cost"
+           parent="menu_costing_configuration"/>
+
+  <act_window id="action_costing_cost"
+        name="costing types"
+        res_model="costing"
+        view_mode="tree,form"/>
+
+</odoo>
