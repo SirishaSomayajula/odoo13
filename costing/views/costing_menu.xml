@@ -2,22 +2,22 @@
 <odoo>
 <!-- Costing App Menu -->
 <menuitem id="menu_costing"
-name="Costing" />
+name="Costing.cost" />
 <!-- Action to open the cost -->
 <act_window id="action_costing_cost"
-name="Costing"
-res_model="costing"
+name="Costing.cost"
+res_model="costing.cost"
 view_mode="tree,form"
 />
 <!-- Menu item to open the cost -->
 <menuitem id="menu_costing_cost"
-name="costing "
+name="costing.cost "
 parent="menu_costing"
 action="action_costing_cost"
 />
 <act_window id="action_costing_cost"
       name="Costing"
-      res_model="costing"
+      res_model="costing.cost"
       view_mode="tree,form"
     />
 
@@ -28,7 +28,7 @@ action="action_costing_cost"
 
 <act_window id="action_costing_cost"
         name="Configuration"
-        res_model="costing"
+        res_model="costing.cost"
         view_mode="tree,form"/>
 
 
@@ -39,7 +39,7 @@ action="action_costing_cost"
            
   <act_window id="action_costing_cost"
         name="costing stages"
-        res_model="costing"
+        res_model="costing.cost"
         view_mode="tree,form"/>
          
 <menuitem id="menu_costing_costing_types"
@@ -48,8 +48,14 @@ action="action_costing_cost"
            parent="menu_costing_configuration"/>
 
   <act_window id="action_costing_cost"
-        name="costing types"
-        res_model="costing"
-        view_mode="tree,form"/>
-
+        name="costing.cost"
+        res_model="costing.cost"
+        view_mode="tree,form"
+    />
+    
+    <act_window id="action_costing_cost"
+        name="costing.cost"
+        res_model="costing.cost"
+        view_mode="tree,form"
+    />
 </odoo>

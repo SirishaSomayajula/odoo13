@@ -1,12 +1,29 @@
 from odoo import fields, models
-class Book(models.Model):
-  _name = 'costing'
+class cost(models.Model):
+  _name = 'costing.cost'
   _description = ('Cost')
-  name = fields.Char('Name', required=True)
-  approvals = fields.Char('approvals')
-  role = fields.Char('role')
-  users= fields.Char('users')
-  approval_type = fields.Char('approval type')
-  folded_in_kanban_view = fields.Boolean( )
-  allow_to_apply_changes = fields.Boolean( )
-  final_stage = fields.Boolean( )
+  name = fields.Char('name')
+  Type = fields.Char('Type')
+  season = fields.Char('Season')
+  style = fields.Char('Style/Ref name')
+  pricelist = fields.Char('Pricelist')
+  currency = fields.Char('Currency')
+  stage = fields.Char('Stage')
+  customer_id = fields.Many2one('res.partner', string='Customer')
+  company_id = fields.Many2one('res.partner', string='Company')
+  def name_get(self):
+        names = []
+        for rec in self:
+            name = '%s/%s' % (rec.customer_id, rec.company_id)
+            names.append((rec.id, name))
+        return names
+
+#      Cost_sheet_details = fields.Text(string='Cost sheet details')
+ #     order_quantity = fields.Text(string='order quantity')
+  #    sample_size = fields.Text(string='sample size')
+   #   size = fields.Text(string='size')
+    #  specifications = fields.Text(string='specifications')
+     # merch_of_division = fields.Text(string='merch of division')
+      #merch_fabrication = fields.Text(string='merch fabrication')
+      #merch_size_offerings = fields.Text(string='merch_size_offerings')
+     # pattern = fields.Text(string='pattern')

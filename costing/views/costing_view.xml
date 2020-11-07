@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+<record id="view_form_cost" model="ir.ui.view">
+<field name="name">Cost Form</field>
+<field name="model">costing.cost</field>
+<field name="arch" type="xml">
+ <form string="costing_cost">
+<sheet>
+<!--<div class="oe_title">
+<h1>
+<field name="name"/>
+</h1>
+  </div>-->
+<group>
+<group>
+<field name="customer_id"/>
+<field name="season"/>
+<field name="style"/>
+</group>
+<group>
+<field name="Type"/>
+<field name="company_id"/>
+<field name="pricelist"/>
+<field name="currency"/>
+<field name="stage"/>
+</group>
+<notebook>
+<page string="General Details">
+<group name="group_top">
+<group name="group_col1">
+<field name="Cost_sheet_details" />
+<field name="order_quantity" />
+<field name="size" />
+<field name="sample_size" />
+</group>
+<group name="group_top">
+<group name="group_col2">
+<field name="specifications" />
+<field name="merch_of_division" />
+<field name="merch_fabrication" />
+<field name="merch_size_offerings" />
+<field name="pattern" />
+</group>
+<page string="Cost Sheet Lines">
+</page>
+<page string="Approvals">
+</page>
+ </group>
+</group>
+   </page>
+</notebook>
+  </group>
+   </sheet>
+   </form>
+  </field>
+  </record>
+</odoo>
