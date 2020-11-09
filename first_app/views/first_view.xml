@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- first App Menu -->
+<menuitem id="menu_first"
+name="First" />
+<!-- Action to open the first -->
+<act_window id="action_first_app"
+name="firstapp"
+res_model="first.app"
+view_mode="tree,form"
+/>
+<menuitem id="menu_first_app"
+name="First"
+parent="menu_first"
+action="action_first_app"/>
+</odoo>
